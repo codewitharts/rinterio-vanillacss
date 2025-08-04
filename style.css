@@ -311,6 +311,10 @@ section {
   width: 100%;
 }
 .portfolio img {
+  opacity: 1;
+}
+.portfolio img:hover {
+  opacity: 0.7;
 }
 .portfolio-img1 {
   flex-basis: 40%;
@@ -371,6 +375,57 @@ a.portfolio-link:hover {
   display: none;
 }
 
+/* Lets Connect */
+.lets-connect-section {
+  position: relative;
+  background-color: rgba(255, 255, 255, 1); /* Optional: Background color */
+  z-index: 0;
+  overflow: hidden;
+}
+
+.lets-connect-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('./img/form-bg.jpg') no-repeat center center / cover;
+  opacity: 0.5; /* <-- This controls the image opacity */
+  z-index: -1;
+}
+
+.lets-connect {
+  text-align: center;
+}
+.lets-connect button {
+  background-color: rgba(171, 239, 95, 0.2);
+}
+#email-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+input,
+textarea {
+  margin: 0.5rem 0;
+  padding: 1.25rem;
+  width: 100%;
+  border: 1px solid rgba(233, 233, 233, 1);
+  border-radius: 4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+}
+textarea {
+  resize: none;
+  border-radius: 2rem;
+}
 /* Mobile */
 @media screen and (min-width: 300px) and (max-width: 833px) {
   .menu_link,
@@ -457,6 +512,10 @@ a.portfolio-link:hover {
   .portfolio-heading,
   .portfolio-link {
     font-size: 1.3rem;
+  }
+
+  .form > div {
+    display: grid;
   }
 }
 
