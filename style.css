@@ -406,7 +406,9 @@ a.portfolio-link:hover {
   justify-content: center;
   margin-top: 1rem;
 }
-
+.form {
+  margin-bottom: 2rem;
+}
 input:focus,
 textarea:focus {
   outline: none;
@@ -425,6 +427,34 @@ textarea {
 textarea {
   resize: none;
   border-radius: 2rem;
+}
+
+.footer {
+  background-color: rgba(28, 28, 28, 1);
+  color: #fff;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+  padding-bottom: 3rem;
+}
+.footer_para {
+  width: 60%;
+  margin: 0 auto;
+  color: var(--text-3);
+}
+#footer-menu {
+  justify-content: space-between;
+  gap: 5rem;
+}
+#footer-menu a {
+  color: #fff !important;
+}
+.footer_copy a:hover {
+  color: var(--main-color) !important;
 }
 /* Mobile */
 @media screen and (min-width: 300px) and (max-width: 833px) {
@@ -516,6 +546,15 @@ textarea {
 
   .form > div {
     display: grid;
+  }
+
+  #footer-menu {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .footer_para {
+    width: 90%;
   }
 }
 
